@@ -33,13 +33,17 @@ if (!isset($_POST['enviado'])){
                 } else if ($figura == 'triangulo'){
                     echo "
                     <label for='base_triangulo'>Pon la base del triángulo:</label>
-                    <input type='number' id='base_triangulo' name='base_triangulo'><br><br>
+                    <input type='number' id='base_triangulo' name='base_triangulo'onmouseleave='validar_base_triangulo()'><br>
+                    <p id='error' style='color: red'></p>
                     <label for='altura_triangulo'>Pon la altura del triángulo:</label>
-                    <input type='number' id='altura_triangulo' name='altura_triangulo'><br><br>
+                    <input type='number' id='altura_triangulo' name='altura_triangulo' onmouseleave='validar_altura_triangulo()'><br>
+                    <p id='error_2' style='color: red'></p>
                     <label for='lado_1_triangulo'>Pon el primer lado del triángulo:</label>
-                    <input type='number' id='lado_1_triangulo' name='lado_1_triangulo'><br><br>
+                    <input type='number' id='lado_1_triangulo' name='lado_1_triangulo' onmouseleave='validar_primer_lado_triangulo()'><br>
+                    <p id='error_3' style='color: red'></p>
                     <label for='lado_2_triangulo'>Pon el segundo lado del triángulo:</label>
-                    <input type='number' id='lado_2_triangulo' name='lado_2_triangulo'><br><br>";
+                    <input type='number' id='lado_2_triangulo' name='lado_2_triangulo' onmouseleave='validar_segundo_lado_triangulo()'><br>
+                    <p id='error_4' style='color: red'></p>";
                 } else if ($figura == 'circulo'){
                     echo "
                     <label for='radio'>Pon el radio del circulo</label>
@@ -48,6 +52,7 @@ if (!isset($_POST['enviado'])){
                 echo "<br><br>
                 <button type='submit' name='envio_final'>Calcular</button>
             </form>";
+    echo "<script src='./js/validacion.js'></script>";
     echo "</body>";
     echo "</html>";
 

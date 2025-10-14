@@ -10,14 +10,14 @@
     <form action="./datos_figura.php" method="POST">
         <h1>Calcular figuras geométricas</h1>
         <label for="figura">Selecciona una figura:</label>
-        <select name="figura" id="figura">
+        <select name="figura" id="figura" onmouseleave="validar_seleccion_figura()">
             <option selected disabled>Seleccione una figura</option>
             <option value="cuadrado">Cuadrado</option>
             <option value="rectangulo">Rectángulo</option>
             <option value="triangulo">Triángulo</option>
             <option value="circulo">Círculo</option>
-        </select>
-        <br><br>
+        </select><br>
+        <p id="error" style="color: red;"></p>
         <button type="submit" name="enviado">Calcular</button>
     </form>
 
@@ -29,5 +29,6 @@
             echo "<br><p>{$_GET['formaVacia']}</p>";
         }
     ?>
+    <script src="./js/validacion.js"></script>
 </body>
 </html>
