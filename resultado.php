@@ -1,8 +1,9 @@
 <?php
 session_start();
-if (!isset($_POST['envio_final']) ){
+
+if (!isset($_SESSION['envio_final']) || $_SESSION['envio_final'] !== true) {
     header('Location: ./index.php?errorform=Tienes que enviar el formulario');
-    exit;
+    exit();
 }
 
 require_once "./calculos/figura.php";
@@ -38,8 +39,7 @@ switch($figura_seleccionada) {
         break;
 }
 
-echo "El área es: " . $figura->calcular_area() . "<br>";
-echo "El perímetro es: " . $figura->calcular_perimetro() . "<br>";
+echo $figura;
 
 echo "</body>";
 echo "</html>";
