@@ -14,7 +14,7 @@ class Rectangulo extends Figura {
         return $perimetro;
     }
     function __tostring() {
-        return "El área del rectángulo es: " . $this->calcular_area() . "<br><br> El perímetro es: " . $this->calcular_perimetro();
+        return "El área del rectángulo es: " . $this->calcular_area() . "<br><br> El perímetro del rectángulo es: " . $this->calcular_perimetro();
     }
 }
 ?>

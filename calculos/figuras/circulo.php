@@ -13,7 +13,7 @@ class Circulo extends Figura {
     }
 
     function __tostring() {
-        return "El área del círculo es: " . $this->calcular_area() . "<br><br> El perímetro es: " . $this->calcular_perimetro();
+        return "El área del círculo es: " . $this->calcular_area() . "<br><br> El perímetro del círculo es: " . $this->calcular_perimetro();
     }
 }
 ?>

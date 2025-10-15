@@ -19,9 +19,11 @@ echo "<html lang='en'>";
 echo "<head>";
 echo "<meta charset='UTF-8'>";
 echo "<meta name='viewport' content='width=device-width, initial-scale=1.0'>";
-echo "<title>Resultado calculo $figura_seleccionada</title>";
+echo "<link rel='stylesheet' href='./css/style.css'>";
+echo "<title>Resultado calculo ($figura_seleccionada)</title>";
 echo "</head>";
 echo "<body>";
+echo "<div class='contenedor'>";
 echo "<h2>Resultado de los calculos de la siguiente figura ($figura_seleccionada)</h2>";
 
 switch($figura_seleccionada) {
@@ -39,8 +41,11 @@ switch($figura_seleccionada) {
         break;
 }
 
+echo "<div class='resultado'>";
 echo $figura;
-
+echo "</div>";
+echo "<a href='./index.php' class='boton-volver'>Volver al inicio</a>";
+echo "</div>";
 echo "</body>";
 echo "</html>";
 ?>

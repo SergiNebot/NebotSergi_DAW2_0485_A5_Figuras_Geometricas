@@ -7,31 +7,29 @@ session_destroy();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Formulario Calculo Figuras Geometricas</title>
 </head>
 <body>
-    <form action="./validaciones/validacion_datos.php" method="POST">
-        <h1>Calcular figuras geométricas</h1>
-        <label for="figura">Selecciona una figura:</label>
-        <select name="figura" id="figura" onblur="validar_seleccion_figura()">
-            <option value="" selected disabled>Seleccione una figura</option>
-            <option value="cuadrado">Cuadrado</option>
-            <option value="rectangulo">Rectángulo</option>
-            <option value="triangulo">Triángulo</option>
-            <option value="circulo">Círculo</option>
-        </select><br>
-        <p id="error" style="color: red;"></p>
-
-        <button type="submit" name="enviado" value="enviado">Calcular</button>
-    </form>
-
-    <?php
-        if(isset($_GET['errorform'])) echo "<br><p>{$_GET['errorform']}</p>";
-        if(isset($_GET['formaVacia'])) echo "<br><p>{$_GET['formaVacia']}</p>";
-        if(isset($_GET['errorbase'])) echo "<br><p>{$_GET['errorbase']}</p>";
-    ?>
-
+    <div class="contenedor">
+        <form action="./validaciones/validacion_datos.php" method="POST">
+            <h1>Calcular figuras geométricas</h1>
+            <label for="figura">Selecciona una figura:</label>
+            <select name="figura" id="figura" onblur="validar_seleccion_figura()">
+                <option value="" selected disabled>Seleccione una figura</option>
+                <option value="cuadrado">Cuadrado</option>
+                <option value="rectangulo">Rectángulo</option>
+                <option value="triangulo">Triángulo</option>
+                <option value="circulo">Círculo</option>
+            </select><br>
+            <p id="error"></p>
+            <?php
+                if(isset($_GET['errorform'])) echo "<p class='error'>{$_GET['errorform']}</p>";
+                if(isset($_GET['formaVacia'])) echo "<p class='error'>{$_GET['formaVacia']}</p>";
+            ?>
+            <button type="submit" name="enviado" value="enviado">Siguiente</button>
+        </form>
+    </div>
     <script src="./js/validacion.js"></script>
 </body>
 </html>

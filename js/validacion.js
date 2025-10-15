@@ -2,7 +2,7 @@ function validar_seleccion_figura() {
     let select = document.getElementById("figura");
 
     if (select.selectedIndex === 0 || select.value === "") {
-        document.getElementById("error").textContent = "Tienes que seleccionar una figura";
+        document.getElementById("error").textContent = "Selecciona una figura";
         return false;
     } else {
         document.getElementById("error").textContent = "";
@@ -12,48 +12,53 @@ function validar_seleccion_figura() {
 
 function validar_base_triangulo(){
     let base = document.getElementById("base_triangulo").value;
+    let errorElement = document.getElementById("error_base");
 
     if (base === ""){
-        document.getElementById("error").innerText = "Por favor, introduzca la base.";
+        errorElement.innerText = "Por favor, introduzca la base.";
     } else if (base <= 0){
-        document.getElementById("error").innerText = "El número tiene que ser más grande que 0.";
+        errorElement.innerText = "El número tiene que ser más grande que 0.";
     } else{
-        document.getElementById("error").innerText = "";        
+        errorElement.innerText = "";        
     }
 }
+
 function validar_altura_triangulo(){
     let altura = document.getElementById("altura_triangulo").value;
+    let errorElement = document.getElementById("error_altura");
 
     if (altura === ""){
-        document.getElementById("error_2").innerText = "Por favor, introduzca la altura.";
+        errorElement.innerText = "Por favor, introduzca la altura.";
     } else if (altura <= 0){
-        document.getElementById("error_2").innerText = "El número tiene que ser más grande que 0.";
+        errorElement.innerText = "El número tiene que ser más grande que 0.";
     }else {
-        document.getElementById("error_2").innerText = "";
+        errorElement.innerText = "";
     }
 }
 
 function validar_primer_lado_triangulo() {
     let lado_1 = document.getElementById("lado_1_triangulo").value;
+    let errorElement = document.getElementById("error_lado1");
     
     if (lado_1 === ""){
-        document.getElementById("error_3").innerText = "Por favor, introduzca los datos de este lado.";
+        errorElement.innerText = "Por favor, introduzca los datos del primer lado.";
     } else if (lado_1 <= 0){
-        document.getElementById("error_3").innerText = "El número tiene que ser más grande que 0.";
+        errorElement.innerText = "El número tiene que ser más grande que 0.";
     }else {
-        document.getElementById("error_3").innerText = "";
+        errorElement.innerText = "";
     }
 }
 
 function validar_segundo_lado_triangulo(){
     let lado_2 = document.getElementById("lado_2_triangulo").value;
+    let errorElement = document.getElementById("error_lado2");
 
     if (lado_2 === ""){
-        document.getElementById("error_4").innerText = "Por favor, introduzca los datos de este lado.";
+        errorElement.innerText = "Por favor, introduzca los datos del segundo lado.";
     } else if (lado_2 <= 0){
-        document.getElementById("error_4").innerText = "El número tiene que ser más grande que 0.";
+        errorElement.innerText = "El número tiene que ser más grande que 0.";
     }else {
-        document.getElementById("error_4").innerText = "";
+        errorElement.innerText = "";
     }
 }
 
