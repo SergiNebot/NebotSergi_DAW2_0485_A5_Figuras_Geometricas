@@ -38,6 +38,8 @@ switch ($figura) {
         <p id='error_2' class='error'></p>";
         if (isset($_GET['errorbase'])) {
             echo "<p class='error'>{$_GET['errorbase']}</p>";
+        } else if (isset($_GET['erroraltura'])){
+            echo "<p class='error'>{$_GET['erroraltura']}</p>";
         }
         break;
 
@@ -56,6 +58,15 @@ switch ($figura) {
     <label for='lado_2_triangulo'>Segundo lado:</label>
     <input type='number' id='lado_2_triangulo' name='lado_2_triangulo' onblur='validar_segundo_lado_triangulo()'><br>
     <p id='error_lado2' class='error'></p>";
+    if (isset($_GET['errorbase'])){
+        echo "<p class='error'>{$_GET['errorbase']}</p>";
+    } else if (isset($_GET['erroraltura'])){
+        echo "<p class='error'>{$_GET['erroraltura']}</p>";
+    } else if (isset($_GET['errorlado1'])){
+        echo "<p class='error'>{$_GET['errorlado1']}</p>";
+    }else if (isset($_GET['errorlado2'])){
+        echo "<p class='error'>{$_GET['errorlado2']}</p>";
+    }
     break;
 
     case 'circulo':

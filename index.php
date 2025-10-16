@@ -22,7 +22,7 @@ session_destroy();
                 <option value="triangulo">Triángulo</option>
                 <option value="circulo">Círculo</option>
             </select><br>
-            <p id="error"></p>
+            <p id="error" class="error"></p>
             <?php
                 if(isset($_GET['errorform'])) echo "<p class='error'>{$_GET['errorform']}</p>";
                 if(isset($_GET['formaVacia'])) echo "<p class='error'>{$_GET['formaVacia']}</p>";
